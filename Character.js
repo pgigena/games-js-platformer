@@ -5,6 +5,9 @@ function Character() {
 	this.velocity = new Velocity();
 	this.maxVelocity = new Velocity();
 	this.acceleration = new Acceleration();
+	this.animations = new Array();
+
+	this.currentAnimationIndex = 0;
 }
 
 Character.prototype.updateSpeed = function (modifierVelocity) {
@@ -32,10 +35,9 @@ Character.prototype.updatePosition = function () {
 };
 
 Character.prototype.draw = function (ctx) {
-	ctx.strokeStyle = '#000';
-	ctx.lineWidth = 1;
-	ctx.strokeRect(this.pos.x, this.pos.y, this.bounds.w, this.bounds.h);
+	this.animations[this.currentAnimationIndex].draw(this.pos.x, this.pos.y, ctx);
 
-	ctx.fillStyle = '#00f';
-	ctx.fillRect(this.pos.x + 1, this.pos.y + 1, this.bounds.w -2, this.bounds.h - 2);
+//	ctx.strokeStyle = '#f00';
+//	ctx.lineWidth = 1;
+//	ctx.strokeRect(this.pos.x, this.pos.y, this.bounds.w, this.bounds.h);
 };

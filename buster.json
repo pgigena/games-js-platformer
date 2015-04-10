@@ -1,0 +1,196 @@
+{
+	"name": "Buster",
+	"sprite": "./buster.png",
+	"animations": [
+		{
+			"name": "stand",
+			"loop": false,
+			"fps": 5,
+			"frameSequence": [ 0 ],
+			"offset": {
+				"x": -5,
+				"y": -10
+			},
+			"frames": [
+				{
+					"spriteBounds": {
+					  "w": 32,
+					  "h": 49
+					},
+					"spriteOffset": {
+					  "x": 4,
+					  "y": 24
+					},
+					"frameOffset": {
+					  "x": 0,
+					  "y": 0
+					}
+				}
+			]
+		},
+		{
+			"name": "die",
+			"loop": true,
+			"fps": 10,
+			"offset": {
+				"x": -10,
+				"y": -10
+			},
+			"frameSequence": [ 0, 1, 2, 3 ],
+			"frames": [
+				{
+					"spriteBounds": {
+					  "w": 40,
+					  "h": 46
+					},
+					"spriteOffset": {
+					  "x": 7,
+					  "y": 354
+					},
+					"frameOffset": {
+					  "x": 0,
+					  "y": 0
+					}
+				},
+				{
+					"spriteBounds": {
+					  "w": 40,
+					  "h": 46
+					},
+					"spriteOffset": {
+					  "x": 52,
+					  "y": 354
+					},
+					"frameOffset": {
+					  "x": 0,
+					  "y": 0
+					}
+				},
+				{
+					"spriteBounds": {
+					  "w": 40,
+					  "h": 46
+					},
+					"spriteOffset": {
+					  "x": 97,
+					  "y": 354
+					},
+					"frameOffset": {
+					  "x": 0,
+					  "y": 0
+					}
+				},
+				{
+					"spriteBounds": {
+					  "w": 40,
+					  "h": 46
+					},
+					"spriteOffset": {
+					  "x": 142,
+					  "y": 354
+					},
+					"frameOffset": {
+					  "x": 0,
+					  "y": 0
+					}
+				}
+			]
+		},
+		{
+			"name": "walkRight",
+			"loop": true,
+			"fps": 10,
+			"frameSequence": [ 0, 1, 2, 3, 4, 5 ],
+			"offset": {
+				"x": -7,
+				"y": -10
+			},
+			"frames": [
+				{
+					"spriteBounds": {
+					  "w": 26,
+					  "h": 47
+					},
+					"spriteOffset": {
+					  "x": 3,
+					  "y": 84
+					},
+					"frameOffset": {
+					  "x": 8,
+					  "y": 0
+					}
+				},
+				{
+					"spriteBounds": {
+					  "w": 34,
+					  "h": 50
+					},
+					"spriteOffset": {
+					  "x": 72,
+					  "y": 81
+					},
+					"frameOffset": {
+					  "x": 2,
+					  "y": -3
+					}
+				},
+				{
+					"spriteBounds": {
+					  "w": 33,
+					  "h": 50
+					},
+					"spriteOffset": {
+					  "x": 34,
+					  "y": 81
+					},
+					"frameOffset": {
+					  "x": 5,
+					  "y": -3
+					}
+				},
+				{
+					"spriteBounds": {
+					  "w": 31,
+					  "h": 47
+					},
+					"spriteOffset": {
+					  "x": 111,
+					  "y": 84
+					},
+					"frameOffset": {
+					  "x": 0,
+					  "y": 0
+					}
+				},
+				{
+					"spriteBounds": {
+					  "w": 26,
+					  "h": 47
+					},
+					"spriteOffset": {
+					  "x": 147,
+					  "y": 84
+					},
+					"frameOffset": {
+					  "x": 5,
+					  "y": 0
+					}
+				},
+				{
+					"spriteBounds": {
+					  "w": 29,
+					  "h": 44
+					},
+					"spriteOffset": {
+					  "x": 178,
+					  "y": 87
+					},
+					"frameOffset": {
+					  "x": 7,
+					  "y": 3
+					}
+				}
+			]
+		}
+	]
+}
