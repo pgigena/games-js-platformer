@@ -21,6 +21,14 @@ Character.prototype.updateSpeed = function (modifierVelocity) {
 		this.velocity.x = -this.maxVelocity.x;
 	}
 
+	if (this.velocity.x == 0 && this.currentAnimationIndex != 0) {
+		this.changeAnimation(0);
+	} else if (this.currentAnimationIndex != 2 && this.velocity.x > 0) {
+		this.changeAnimation(2);
+	} else if (this.currentAnimationIndex != 1 && this.velocity.x < 0) {
+		this.changeAnimation(1);
+	}
+
 	// Cap y velocity when falling?
 	this.velocity.y += this.acceleration.y;
 	this.velocity.y += modifierVelocity.y;
@@ -37,7 +45,14 @@ Character.prototype.updatePosition = function () {
 Character.prototype.draw = function (ctx) {
 	this.animations[this.currentAnimationIndex].draw(this.pos.x, this.pos.y, ctx);
 
-//	ctx.strokeStyle = '#f00';
-//	ctx.lineWidth = 1;
-//	ctx.strokeRect(this.pos.x, this.pos.y, this.bounds.w, this.bounds.h);
+	ctx.strokeStyle = '#f00';
+	ctx.lineWidth = 1;
+	ctx.strokeRect(this.pos.x, this.pos.y, this.bounds.w, this.bounds.h);
+};
+
+Character.prototype.changeAnimation = function (animationIndex) {
+	this.animations[this.currentAnimationIndex].end();
+
+	this.currentAnimationIndex = animationIndex;
+	this.animations[animationIndex].start();
 };
