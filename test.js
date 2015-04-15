@@ -42,8 +42,6 @@ window.onload = function () {
 	map[14] = new Array(1,1,1,1,1,1,0,0,0,1,1,1);
 	map[15] = new Array(1,1,1,1,1,1,1,1,1,1,1,1);
 
-	console.log(new Character());
-
 	graphics = document.getElementById('test').getContext('2d');
 	background = document.getElementById('bg').getContext('2d');
 
