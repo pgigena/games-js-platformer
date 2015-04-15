@@ -95,9 +95,9 @@ Game.prototype.onKeyUp = function (keyCode) {
 
 Game.prototype.initializePlayer = function () {
 	this.player.pos.x = 15;
-	this.player.pos.y = 15;
+	this.player.pos.y = 30;
 
-	this.player.bounds.w = 25;
+	this.player.bounds.w = 20;
 	this.player.bounds.h = 35;
 
 	this.player.maxVelocity.x = 15;
@@ -108,13 +108,13 @@ Game.prototype.initializePlayer = function () {
 	var game = this;
 
 	var request = new XMLHttpRequest();
-	request.open("GET", "./buster.json");
+	request.open("GET", "./anim/buster.json");
 	request.onload = function () { 
 		var i = 1;
 		var character = JSON.parse(request.responseText);
 		
 		var sprite = document.createElement('img');
-		sprite.src = "./buster.png";
+		sprite.src = character.sprite;
 
 		for (var i in character.animations) {
 			var animation = new Animation();
