@@ -22,7 +22,7 @@ Game.prototype.run = function () {
 	this.addEventListeners();
 
 	this.initializePlayer();
-	this.map.draw(this.graphics.map);
+//	this.map.draw(this.graphics.map);
 
 	window.setInterval(function () {
 		window.requestAnimationFrame(function () {
@@ -100,8 +100,8 @@ Game.prototype.initializePlayer = function () {
 	this.player.bounds.w = 20;
 	this.player.bounds.h = 35;
 
-	this.player.maxVelocity.x = 15;
-	this.player.maxVelocity.y = 15;
+	this.player.maxVelocity.x = 8;
+	this.player.maxVelocity.y = 8;
 
 	// Animations
 	var buster = this.player;
