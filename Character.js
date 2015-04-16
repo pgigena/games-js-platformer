@@ -7,7 +7,7 @@ function Character() {
 	this.acceleration = new Acceleration();
 	this.animations = new Array();
 
-	this.currentAnimationIndex = 3;
+	this.currentAnimationIndex = 4;
 }
 
 Character.prototype.updateSpeed = function (modifierVelocity) {
@@ -21,13 +21,13 @@ Character.prototype.updateSpeed = function (modifierVelocity) {
 		this.velocity.x = -this.maxVelocity.x;
 	}
 
-	if (this.velocity.x == 0 && this.currentAnimationIndex != 0) {
-		this.changeAnimation(0);
-	} else if (this.currentAnimationIndex != 2 && this.velocity.x > 0) {
-		this.changeAnimation(2);
-	} else if (this.currentAnimationIndex != 3 && this.velocity.x < 0) {
-		this.changeAnimation(3);
-	}
+//	if (this.velocity.x == 0 && this.currentAnimationIndex != 0) {
+//		this.changeAnimation(0);
+//	} else if (this.currentAnimationIndex != 2 && this.velocity.x > 0) {
+//		this.changeAnimation(2);
+//	} else if (this.currentAnimationIndex != 3 && this.velocity.x < 0) {
+//		this.changeAnimation(3);
+//	}
 
 	// Cap y velocity when falling?
 	this.velocity.y += this.acceleration.y;

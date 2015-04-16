@@ -14,24 +14,18 @@ function Animation() {
 
 Animation.prototype.start = function () {
 	var animation = this;
-//	this.frameInterval = new Timer(function () {
-//		animation.nextFrame();
-//	}, 1000 / this.fps);
-	this.frameInterval = setInterval(function () {
-		animation.nextFrame();
-	}, 1000 / this.fps);
+
+	if (this.fps) {
+		this.frameInterval = setInterval(function () {
+			animation.nextFrame();
+		}, 1000 / this.fps);
+	}
 };
 
-//Animation.prototype.pause = function () {
-//	this.frameInterval.pause();
-//};
-//
-//Animation.prototype.resume = function () {
-//	this.frameInterval.resume();
-//};
-
 Animation.prototype.end = function () {
-	clearInterval(this.frameInterval);
+	if (this.frameInterval != null) {
+		clearInterval(this.frameInterval);
+	}
 };
 
 Animation.prototype.nextFrame = function () {

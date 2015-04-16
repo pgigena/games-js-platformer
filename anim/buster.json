@@ -5,7 +5,7 @@
 		{
 			"name": "standRight",
 			"loop": false,
-			"fps": 5,
+			"fps": 1,
 			"frameSequence": [0],
 			"offset": {
 				"x": -5,
@@ -284,6 +284,100 @@
 					"frameOffset": {
 						"x": -2,
 						"y": 3
+					}
+				}
+			]
+		},
+		{
+			"name": "jumpRight",
+			"loop": false,
+			"fps": 1,
+			"frameSequence": [0, 1],
+			"offset": {
+				"x": -5,
+				"y": -5
+			},
+			"frames": [
+				{
+					"spriteBounds": {
+						"w": 26,
+						"h": 42
+					},
+					"spriteOffset": {
+						"x": 3,
+						"y": 218
+					},
+					"frameOffset": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"spriteBounds": {
+						"w": 44,
+						"h": 43
+					},
+					"spriteOffset": {
+						"x": 34,
+						"y": 200
+					},
+					"frameOffset": {
+						"x": -15,
+						"y": -1
+					}
+				}
+			]
+		},
+		{
+			"name": "fallRight",
+			"loop": 5,
+			"fps": 3,
+			"frameSequence": [1, 2],
+			"offset": {
+				"x": -5,
+				"y": -5
+			},
+			"frames": [
+				{
+					"spriteBounds": {
+						"w": 44,
+						"h": 43
+					},
+					"spriteOffset": {
+						"x": 34,
+						"y": 200
+					},
+					"frameOffset": {
+						"x": -15,
+						"y": -1
+					}
+				},
+				{
+					"spriteBounds": {
+						"w": 34,
+						"h": 53
+					},
+					"spriteOffset": {
+						"x": 83,
+						"y": 206
+					},
+					"frameOffset": {
+						"x": -15,
+						"y": -1
+					}
+				},
+				{
+					"spriteBounds": {
+						"w": 37,
+						"h": 37
+					},
+					"spriteOffset": {
+						"x": 125,
+						"y": 227
+					},
+					"frameOffset": {
+						"x": -15,
+						"y": -1
 					}
 				}
 			]

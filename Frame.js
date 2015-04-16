@@ -1,4 +1,4 @@
-function Frame(spriteOffset, frameOffset, w, h) {
+function Frame(spriteX, spriteY, w, h, frameX, frameY) {
 	this.spriteOffset = new Vector();
 	this.offset = new Vector();
 	this.bounds = new BoundingBox();
