@@ -162,13 +162,13 @@ Game.prototype.mainLoop = function () {
 };
 
 Game.prototype.updateSpeed = function () {
-	var velocityModifiers = new Velocity();
+	var velocityModifiers = new Vector();
 
 	// Friction is a module, the direction is determined when applying the velocity modifier to the velocity vector
 	if (this.player.velocity.x < 0) {
-		velocityModifiers.x += 1;
+		velocityModifiers.x += 1.5;
 	} else if (this.player.velocity.x > 0) {
-		velocityModifiers.x -= 1;
+		velocityModifiers.x -= 1.5;
 	}
 
 	this.player.updateSpeed(velocityModifiers);

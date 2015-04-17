@@ -2,12 +2,12 @@ function Character() {
 	this.pos = new Vector();
 	this.prevPos = new Vector();
 	this.bounds = new BoundingBox();
-	this.velocity = new Velocity();
-	this.maxVelocity = new Velocity();
-	this.acceleration = new Acceleration();
+	this.velocity = new Vector();
+	this.maxVelocity = new Vector();
+	this.acceleration = new Vector();
 	this.animations = new Array();
 
-	this.currentAnimationIndex = 4;
+	this.currentAnimationIndex = 5;
 }
 
 Character.prototype.updateSpeed = function (modifierVelocity) {
