@@ -45,7 +45,4 @@ Animation.prototype.currentFrame = function () {
 Animation.prototype.draw = function (x, y, ctx) {
 	var frame = this.currentFrame();
 	ctx.drawImage(this.sprite, frame.spriteOffset.x, frame.spriteOffset.y, frame.bounds.w, frame.bounds.h, x + this.offset.x + frame.offset.x, y + this.offset.y + frame.offset.y, frame.bounds.w, frame.bounds.h);
-	ctx.save();
-	ctx.scale(-1, 1);
-	ctx.restore();
 };
